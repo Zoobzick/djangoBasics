@@ -3,12 +3,6 @@
 from django.db import migrations
 
 
-def forward_func(apps, schema_editor):
-    News = apps.get_model("mainapp", "News")
-
-    New
-
-
 class Migration(migrations.Migration):
 
     dependencies = [
