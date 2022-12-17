@@ -25,13 +25,10 @@ SECRET_KEY = "django-insecure-n+=lc6$)@*^lerajx9^kd@z25^bkbvm)3z_v^)t3eyiaxm=0d3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["192.168.0.20", "127.0.0.1", "192.168.0.15"]
 
 if DEBUG:
-    INTERNAL_IPS = [
-        "192.168.1.4",
-        "127.0.0.1",
-    ]
+    INTERNAL_IPS = ["192.168.0.20", "127.0.0.1", "192.168.0.15"]
 
 
 # Application definition
@@ -203,7 +200,7 @@ LOGGING = {
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379",
+        "LOCATION": "redis://192.168.0.20:6379",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
